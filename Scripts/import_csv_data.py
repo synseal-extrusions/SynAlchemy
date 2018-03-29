@@ -8,6 +8,7 @@ from sqlalchemy import create_engine
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+import shutil
 
 engine = create_engine('sqlite:////home/ashleyc/Desktop/SynAlchemyApp/SynAlchemy/Scripts/dev.db', echo=True)
 Base = declarative_base()
@@ -50,10 +51,14 @@ def process_files(data):
 	to SQL. 
 	"""
 	root_dir = "X:\\Alchemy Data\\"
+	new_root_dir = "E:\\Data\\" # where all of the file structure needs to be moved to
 	file_name = data[5]
 	file_dir = data[6][2:]
-	fq_path = "{}{}\\{}".format(root_dir,file_dir,file_name)
+	old_fq_path = "{}{}\\{}".format(root_dir,file_dir,file_name)
+	fq_path = "{}{}\\{}".format(new_root_dir,file_dir,file_name)
 	data.append(fq_path)
+
+	#shutil.copy2(old_fq_path, fq_path) still needs testing
 	return data
 
 def import_csv_to_sql(data):
