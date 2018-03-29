@@ -30,3 +30,5 @@ def get_deliverynotes():
 		delivernotedata['New_File_Path'] = deliverynote.New_File_Path
 		deliverynotes.append(delivernotedata)
 	return jsonify(deliverynotes)
+
+

@@ -1,6 +1,9 @@
 # script to import data from csv and import into SQLite db
 
 # import libs
+import sys
+
+sys.dont_write_bytecode = True
 import csv
 import ntpath
 import sqlalchemy
