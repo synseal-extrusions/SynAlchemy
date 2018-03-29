@@ -27,5 +27,6 @@ def get_deliverynotes():
 		delivernotedata['Folder_Title'] = deliverynote.Folder_Title
 		delivernotedata['Account_Code'] = deliverynote.Account_Code
 		delivernotedata['Delivery_Date'] = deliverynote.Delivery_Date
+		delivernotedata['New_File_Path'] = deliverynote.New_File_Path
 		deliverynotes.append(delivernotedata)
 	return jsonify(deliverynotes)

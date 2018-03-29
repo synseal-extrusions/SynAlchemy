@@ -19,5 +19,4 @@ class DeliveryNotes(Base):
 	Folder_Title = Column(String)
 	Account_Code = Column(String)
 	Delivery_Date = Column(String)
-	Full_Text = Column(String)
-	OCR = Column(String)
+	New_File_Path = Column(String)
