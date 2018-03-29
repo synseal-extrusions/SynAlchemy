@@ -50,18 +50,18 @@ def import_csv_to_sql(data):
 	"""
 	session = Session()
 	new_record = DeliveryNotes(alchemy_id = data[0],
-							   NextID = data[1],
-							   ParentID = data[2],
-							   Folder = data[3],
-							   Document_ID = data[4],
-							   File_Name = data[5],
-							   File_Directory = data[6],
-							   File_Size = data[7],
-							   File_Format = data[8],
-							   File_Date = data[9],
-							   Folder_Title = data[10],
-							   Account_Code = data[11],
-							   Delivery_Date = data[12])
+								NextID = data[1],
+								ParentID = data[2],
+								Folder = data[3],
+								Document_ID = data[4],
+								File_Name = data[5],
+								File_Directory = data[6],
+								File_Size = data[7],
+								File_Format = data[8],
+								File_Date = data[9],
+								Folder_Title = data[10],
+								Account_Code = data[11],
+								Delivery_Date = data[12])
 	session.add(new_record)
 	session.commit()
 
